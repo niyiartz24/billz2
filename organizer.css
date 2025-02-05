@@ -1,0 +1,271 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+/* Container for signup, login, forgot password, and bill manager */
+#signup-container, #login-container, #forgot-password-container, #bill-manager-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Signup and Login Titles */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Inputs and Buttons */
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Button Hover Effects */
+button:hover {
+    background-color: #5cb85c;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Links Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+body.dark-mode #signup-container, 
+body.dark-mode #login-container, 
+body.dark-mode #forgot-password-container, 
+body.dark-mode #bill-manager-container {
+    background-color: #3c3c3c;
+    color: #fff;
+}
+
+body.dark-mode input, 
+body.dark-mode select, 
+body.dark-mode button {
+    background-color: #555;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+body.dark-mode button:hover {
+    background-color: #28a745;
+}
+
+/* Signup and Login Links */
+#signup-container p, 
+#login-container p {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Bill Manager Section */
+#bill-manager-container h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+#bill-manager-container input[type="text"], 
+#bill-manager-container select {
+    width: 60%;
+    display: inline-block;
+}
+
+#bill-manager-container ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#bill-manager-container ul li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bill-manager-container ul li:hover {
+    background-color: #f1f1f1;
+}
+
+#bill-manager-container #total-amount {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#bill-manager-container #clear-bills {
+    background-color: #dc3545;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+#bill-manager-container #clear-bills:hover {
+    background-color: #c82333;
+}
+
+/* Add Bill Form Styling */
+#bill-form input[type="text"], 
+#bill-form input[type="number"], 
+#bill-form select {
+    width: 30%;
+    margin-right: 5%;
+}
+
+#bill-form button {
+    background-color: #007bff;
+    color: white;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+}
+
+#bill-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Dark Mode Toggle Button */
+#theme-btn {
+    background-color: #28a745;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#theme-btn:hover {
+    background-color: #218838;
+}
+
+#logout-btn {
+    background-color: #dc3545;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#logout-btn:hover {
+    background-color: #c82333;
+}
+
+#search-bill {
+    width: 60%;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+#category-filter {
+    width: 30%;
+    display: inline-block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    #bill-manager-container ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #bill-form input[type="text"], 
+    #bill-form input[type="number"], 
+    #bill-form select,
+    #bill-form button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #bill-manager-container input[type="text"], 
+    #bill-manager-container select {
+        width: 100%;
+    }
+}
+/* General styles for the currency select dropdown */
+#currency-select {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 150px;
+    margin: 10px 0;
+}
+
+/* Focused state for the currency select dropdown */
+#currency-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Hover effect for the dropdown */
+#currency-select:hover {
+    border-color: #007bff;
+}
+
+/* Style the options */
+#currency-select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Style for the container around currency select (if you want extra styling) */
+.currency-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Optional: Add a label for the currency select */
+.currency-container label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333;
+}
